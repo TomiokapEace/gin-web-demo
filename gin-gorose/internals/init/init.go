@@ -5,6 +5,9 @@ import (
 	"net/http"
 	"sync"
 
+	"gin-gorose/internals/cors"
+	"gin-gorose/internals/db"
+
 	"github.com/gin-gonic/gin"
 	"github.com/gohouse/gorose/v2"
 	_ "github.com/mattn/go-sqlite3"
@@ -28,7 +31,7 @@ func InitGorose() {
 
 func InitUser() {
 	dbSql := `CREATE TABLE IF NOT EXISTS "users" ( "uid" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "username" TEXT NOT NULL default "", "age" integer NOT NULL default 0)`
-	affected_rows, err := DB().Execute(dbSql)
+	affected_rows, err := db.DB().Execute(dbSql)
 	if err != nil {
 		panic(err.Error())
 	}
@@ -46,7 +49,7 @@ func InitGin() {
 				<h1>简单实现增删改查</h1>
 				</center>`)
 	})
-	router.Use(Cors())
+	router.Use(cors.Cors())
 	router.GET("/UserAdd", handler.UserAdd)
 	router.GET("/UserList", handler.UserList)
 	router.GET("/UserEdit", handler.UserEdit)

@@ -1,14 +1,32 @@
-module gopro
+module gin-gorose
 
-go 1.12
+go 1.19
 
 require (
 	github.com/gin-gonic/gin v1.8.2
-	github.com/gohouse/converter v0.0.3 // indirect
-	github.com/gohouse/gorose v1.0.5 // indirect
-	github.com/gohouse/gorose/v2 v2.1.4-0.20191021082758-f63abbc61d07
+	github.com/gohouse/gorose/v2 v2.1.12
 	github.com/mattn/go-sqlite3 v1.14.16
-	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
-	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
-	gopkg.in/go-playground/validator.v8 v8.18.2 // indirect
+)
+
+require (
+	github.com/gin-contrib/sse v0.1.0 // indirect
+	github.com/go-playground/locales v0.14.0 // indirect
+	github.com/go-playground/universal-translator v0.18.0 // indirect
+	github.com/go-playground/validator/v10 v10.11.1 // indirect
+	github.com/goccy/go-json v0.9.11 // indirect
+	github.com/gohouse/golib v0.0.0-20210711163732-a5c22059eb75 // indirect
+	github.com/gohouse/t v0.0.0-20201007094014-630049a6bfe9 // indirect
+	github.com/json-iterator/go v1.1.12 // indirect
+	github.com/leodido/go-urn v1.2.1 // indirect
+	github.com/mattn/go-isatty v0.0.16 // indirect
+	github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 // indirect
+	github.com/modern-go/reflect2 v1.0.2 // indirect
+	github.com/pelletier/go-toml/v2 v2.0.6 // indirect
+	github.com/ugorji/go/codec v1.2.7 // indirect
+	golang.org/x/crypto v0.0.0-20211215153901-e495a2d5b3d3 // indirect
+	golang.org/x/net v0.4.0 // indirect
+	golang.org/x/sys v0.3.0 // indirect
+	golang.org/x/text v0.5.0 // indirect
+	google.golang.org/protobuf v1.28.1 // indirect
+	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
