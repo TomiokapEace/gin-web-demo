@@ -1,4 +1,4 @@
-package main
+package init
 
 import (
 	"gopro/handler"
@@ -10,7 +10,6 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
-// 初始化
 var once sync.Once
 var engin *gorose.Engin
 
@@ -54,13 +53,4 @@ func InitGin() {
 	router.GET("/UserDelete", handler.UserDelete)
 	router.Static("/html", "./") // 静态文件服务
 	router.Run()
-}
-
-// /
-// /
-
-func main() {
-	InitGorose()
-	InitUser()
-	InitGin()
 }
